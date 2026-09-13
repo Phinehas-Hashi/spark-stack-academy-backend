@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import sparkAIRouter from "./routes/spark-ai.js";
+import paymentsRouter from "./routes/payments.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
@@ -33,6 +34,7 @@ app.get("/health", (_req, res) => {
 });
 
 app.use("/api/spark-ai", sparkAIRouter);
+app.use("/api/payments", paymentsRouter);
 
 app.use((err, _req, res, _next) => {
   console.error(err);
