@@ -1,0 +1,21 @@
+{
+  "name": "spark-stack-academy-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backend API for Spark Stack Academy payments and Spark AI.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.5.0"
+  }
+}
